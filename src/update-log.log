@@ -1,0 +1,85 @@
+2024-11-04T13:02:36.149Z [INFO]: Server is running on http://localhost:3000
+2024-11-04T13:03:15.409Z [INFO]: Server is running on http://localhost:3006
+2024-11-04T13:06:06.388Z [INFO]: Server is running on http://localhost:3006
+2024-11-04T13:09:42.246Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:06:31.426Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T06:06:31.428Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:07:01.832Z [ERROR]: Error saving/updating data: Invalid column name 'Customer'.
+2024-11-05T06:11:39.893Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T06:11:39.895Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:12:52.858Z [ERROR]: Error saving/updating data: Invalid column name 'Org'.
+2024-11-05T06:14:58.604Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T06:14:58.606Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:20:27.872Z [ERROR]: Error saving/updating data: Invalid column name 'Churn_Risk'.
+2024-11-05T06:20:34.599Z [ERROR]: Error saving/updating data: Invalid column name 'Churn_Risk'.
+2024-11-05T06:22:02.131Z [ERROR]: Error saving/updating data: Invalid column name 'Churn_Risk'.
+2024-11-05T06:29:48.957Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T06:29:48.959Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:30:09.753Z [ERROR]: Error saving/updating data: Invalid column name 'Upsell_Cross_sell_Opportunity'.
+2024-11-05T06:40:17.278Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T06:40:17.279Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T06:40:30.547Z [ERROR]: Error saving/updating data: Conversion failed when converting the varchar value '$4444' to data type int.
+2024-11-05T06:40:42.520Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T06:45:42.052Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:21:33.505Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T07:21:33.507Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T07:21:51.358Z [ERROR]: Error saving/updating data: Must declare the scalar variable "@Reason".
+2024-11-05T07:22:05.457Z [ERROR]: Error saving/updating data: Must declare the scalar variable "@Reason".
+2024-11-05T07:23:42.932Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T07:23:42.934Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T07:24:01.805Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T07:25:08.191Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T07:25:31.073Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T07:33:04.952Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T07:33:04.954Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T07:33:41.013Z [INFO]: Org Example Org 3 updated successfully.
+2024-11-05T07:34:23.891Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:35:19.539Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:35:46.473Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:36:42.683Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:37:42.402Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:37:43.286Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:39:41.412Z [ERROR]: Error saving/updating data: The conversion of the varchar value '666666666666666666' overflowed an int column.
+2024-11-05T07:40:03.938Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T07:40:03.941Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T07:40:14.583Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:41:14.908Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:41:50.422Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:46:19.168Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T07:47:03.250Z [INFO]: Org Example Org 3 updated successfully.
+2024-11-05T07:47:56.800Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T07:47:56.802Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T07:48:11.380Z [INFO]: Org Example Org 3 updated successfully.
+2024-11-05T09:19:21.902Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:19:21.905Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:19:38.295Z [INFO]: Org Example Org 3 updated successfully.
+2024-11-05T09:21:46.574Z [INFO]: Org Example Org 3 updated successfully.
+2024-11-05T09:24:36.145Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:24:36.149Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:25:12.382Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:25:39.014Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:25:55.811Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:29:56.032Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:29:56.034Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:30:17.634Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:32:18.578Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:32:18.580Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:46:24.262Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:46:24.264Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:50:43.831Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T09:50:43.834Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T09:51:21.713Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:52:02.476Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:52:46.506Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:53:17.532Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T09:54:58.188Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T10:02:33.846Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T10:03:15.116Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T11:09:14.803Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T11:16:21.466Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T11:16:21.468Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T11:18:51.726Z [INFO]: Connected to SQL Server successfully.
+2024-11-05T11:18:51.728Z [INFO]: Server is running on http://localhost:3006
+2024-11-05T11:19:43.081Z [INFO]: Org Example Org 2 updated successfully.
+2024-11-05T11:43:43.691Z [INFO]: Org Example Org 1 updated successfully.
+2024-11-05T11:43:43.992Z [INFO]: Org Example Org 1 updated successfully.

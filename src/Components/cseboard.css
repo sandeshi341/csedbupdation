@@ -1,0 +1,52 @@
+.dropdown-box {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+   
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+   
+    text-align: left;
+}
+
+.container {
+    width: 60%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .form-group {
+        flex-direction: column; /* Stack label and dropdown on smaller screens */
+        align-items: flex-start;
+    }
+
+    .form-group label {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+}
+
+.form-group .dropdown-arrow {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent interaction with the arrow */
+    font-size: 1rem;
+    color: #333;
+  }
+  
