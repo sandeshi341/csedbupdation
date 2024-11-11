@@ -110,7 +110,7 @@ app.post("/api/saveData", async (req, res) => {
     Remedy,
     Upsell_Cross_sell_Opportunity,
     Churn_Risk,
-    ARR,
+    // ARR,
     Health,
   } = req.body;
 
@@ -125,7 +125,7 @@ app.post("/api/saveData", async (req, res) => {
     Remedy,
     Upsell_Cross_sell_Opportunity,
     Churn_Risk,
-    ARR,
+    // ARR,
     Health,
   };
 

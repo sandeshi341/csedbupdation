@@ -19,7 +19,7 @@ function CseBoard() {
     { label: "Remedy", options: [] },
     { label: "Upsell/Cross sell Opportunity", options: [] },
     { label: "Churn_Risk", options: ["Yes", "No"] },
-    { label: "ARR", options: [] },
+    // { label: "ARR", options: [] },
     { label: "Health", options: ["-", "Green", "Red", "Yellow"] },
   ];
 
@@ -196,11 +196,11 @@ function CseBoard() {
 
           <div className="ui-log">
             <h2>UI Log:</h2>
-            <ul>
+            {/* <ul>
               {uiLog.map((log, index) => (
                 <li key={index}>{log}</li>
               ))}
-            </ul>
+            </ul> */}
           </div>
         </div>
       </div>
