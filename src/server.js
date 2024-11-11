@@ -13,7 +13,7 @@ const port = 3006;
 app.use(bodyParser.json());
 app.use(cors());
 
-// MSSQL configuration (Sensitive info masked in logs)
+// MSSQL configuration
 const dbConfig = {
   user: "RDT_ADMIN",
   password: "R1ghtD@T@Admin@Re@d",
@@ -69,13 +69,34 @@ app.get("/api/Org", async (req, res) => {
   try {
     const pool = await sql.connect(dbConfig);
     const result = await pool.request().query(`
-            SELECT DISTINCT Org FROM Dashboard.dbo.Dashboard_With_ARR
-        `);
+      SELECT DISTINCT Org FROM Dashboard.dbo.Dashboard_With_ARR
+    `);
     const Org = result.recordset.map((row) => row.Org);
     res.status(200).json(Org);
   } catch (error) {
     logger.error(`Error fetching Org data: ${error.message}`);
     res.status(500).json({ message: "Error fetching Org data", error: error.message });
+  }
+});
+
+// Route to fetch customer details by Org
+app.get("/api/customer/:Org", async (req, res) => {
+  const { Org } = req.params;
+
+  try {
+    const pool = await sql.connect(dbConfig);
+    const result = await pool.request()
+      .input("Org", sql.VarChar, Org)
+      .query(`SELECT * FROM Dashboard.dbo.Dashboard_With_ARR WHERE Org = @Org`);
+
+    if (result.recordset.length === 0) {
+      res.status(404).json({ message: "Customer not found" });
+    } else {
+      res.status(200).json(result.recordset[0]);
+    }
+  } catch (error) {
+    logger.error(`Error fetching customer data: ${error.message}`);
+    res.status(500).json({ message: "Error fetching customer data", error: error.message });
   }
 });
 
@@ -132,18 +153,16 @@ app.post("/api/saveData", async (req, res) => {
 
     const OrgExists = checkResult.recordset[0].count > 0;
 
-    // Prepare the SQL command and parameters
     let result;
     if (OrgExists) {
-      // Construct the UPDATE query
       let updateQuery = `UPDATE Dashboard.dbo.Dashboard_With_ARR SET `;
       let setClauses = [];
       const request = pool.request().input("Org", sql.VarChar, Org);
 
       Object.keys(fields).forEach((key) => {
-        if (fields[key] !== undefined && fields[key] !== "-") { // Check to exclude "-"
+        if (fields[key] !== undefined && fields[key] !== "-") {
           setClauses.push(`${key} = @${key}`);
-          request.input(key, sql.VarChar, fields[key]); // Declare input parameter dynamically
+          request.input(key, sql.VarChar, fields[key]);
         }
       });
 
@@ -154,35 +173,22 @@ app.post("/api/saveData", async (req, res) => {
       }
 
       updateQuery += setClauses.join(", ") + " WHERE Org = @Org";
-
-      // Log the update query for debugging
-      logger.info(`Executing update query: ${updateQuery}`);
-      logger.info(`Parameters: ${JSON.stringify(request.parameters)}`);
-
-      // Execute the update query
       result = await request.query(updateQuery);
       logger.info(`Org ${Org} updated successfully.`);
       res.status(200).json({ message: "Org data updated successfully" });
     } else {
-      // Construct the INSERT query
       let insertQuery = `
         INSERT INTO Dashboard.dbo.Dashboard_With_ARR (Org, ${Object.keys(fields).filter((key) => fields[key] !== undefined && fields[key] !== "-").join(", ")})
         VALUES (@Org, ${Object.keys(fields).filter((key) => fields[key] !== undefined && fields[key] !== "-").map((key) => `@${key}`).join(", ")})
       `;
       const insertRequest = pool.request().input("Org", sql.VarChar, Org);
 
-      // Declare all necessary input parameters for the insert query
       Object.keys(fields).forEach((key) => {
-        if (fields[key] !== undefined && fields[key] !== "-") { // Check to exclude "-"
-          insertRequest.input(key, sql.VarChar, fields[key]); // Declare input parameter dynamically
+        if (fields[key] !== undefined && fields[key] !== "-") {
+          insertRequest.input(key, sql.VarChar, fields[key]);
         }
       });
 
-      // Log the insert query for debugging
-      logger.info(`Executing insert query: ${insertQuery}`);
-      logger.info(`Parameters: ${JSON.stringify(insertRequest.parameters)}`);
-
-      // Execute the insert query
       result = await insertRequest.query(insertQuery);
       logger.info(`New Org ${Org} inserted successfully.`);
       res.status(200).json({ message: "New Org data saved successfully" });
